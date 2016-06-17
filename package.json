@@ -1,6 +1,6 @@
 {
   "name": "server-notifier",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "notifier for t1bao",
   "homepage": "",
   "author": {
@@ -45,7 +45,6 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "private": true,
   "dependencies": {
     "ejs": "^2.4.2",
     "node-notification": "^0.1.2"
