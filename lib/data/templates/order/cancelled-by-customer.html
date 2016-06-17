@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>你的订单已经被客户取消</title>
+    <style>
+      div {
+        font-size: 14px;
+      }
+      div > span {
+        color: red;
+      }
+      div > i {
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>您好， <%=merchant.username%></p>
+    <div>您的客户取消了订单:<%=order.no%>。<br/>
+    </div>
+  </body>
+</html>

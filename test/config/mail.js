@@ -1,7 +1,7 @@
 module.exports = {
-  host: 'smtp.exmail.qq.com',
-  port: 465,
-  secure: true, // use SSL
-  password: ')63S91fT/#:&3W',
-  email: 'noreply@t1bao.com'
+  host: process.env.NN_MAIL_SERVER,
+  port: process.env.NN_MAIL_PORT,
+  secure: 'true',
+  password: process.env.NN_MAIL_PASSWORD,
+  email: process.env.NN_MAIL_EMAIL
 };
