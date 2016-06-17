@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>你的订单已经被商家接受</title>
+    <style>
+      div {
+        font-size: 14px;
+      }
+      div > span {
+        color: red;
+      }
+      div > i {
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>您好， <%=customer.username%></p>
+    <div>您在[<span><a href="http://www.t1bao.com">田一块小卖部</a></span>]门店[<%=store.name%>]下的订单已经被接受。<br/>
+      请及时取货或者耐心等待配送。</div>
+  </body>
+</html>

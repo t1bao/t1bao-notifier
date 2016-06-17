@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>您有新的货到付款订单</title>
+    <style>
+      div {
+        font-size: 14px;
+      }
+      div > span {
+        color: red;
+      }
+      div > i {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <p>您好， <%=merchant.username%></p>
+    <div>您的[<span><a href="http://www.t1bao.com">田一块小卖部</a></span>]有新的货到付款订单。<br/>
+      订单号：<i><%=order.no%></i><br/>
+      订单地址：<i><%=order.address%></i><br/>
+      接收人：<i><%=order.receiver%></i><br/>
+      联系电话：<i><%=order.phone%></i><br/>
+      请及时接受订单，10分钟没有接受将取消订单。</div>
+  </body>
+</html>
