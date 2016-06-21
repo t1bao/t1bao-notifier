@@ -11,7 +11,7 @@ describe('server-notifier', function () {
         config: smsConfig,
         toUser: process.env.NN_SMS_PHONE,
         options: {
-          captcha: '388222',
+          captcha: '388222'
         }
       };
       events.emit('sms', 'user/register', options, function (error, data) {
@@ -31,7 +31,7 @@ describe('server-notifier', function () {
         config: smsConfig,
         toUser: process.env.NN_SMS_PHONE,
         options: {
-          password: '388222',
+          password: '388222'
         }
       };
       events.emit('sms', 'password/create', options, function (error, data) {
@@ -51,7 +51,7 @@ describe('server-notifier', function () {
         config: smsConfig,
         toUser: process.env.NN_SMS_PHONE,
         options: {
-          password: '381222',
+          password: '381222'
         }
       };
       events.emit('sms', 'password/retrieve', options, function (error, data) {
@@ -71,7 +71,7 @@ describe('server-notifier', function () {
         config: smsConfig,
         toUser: process.env.NN_SMS_PHONE,
         options: {
-          captcha: '381222',
+          captcha: '381222'
         }
       };
       events.emit('sms', 'captcha/general', options, function (error, data) {

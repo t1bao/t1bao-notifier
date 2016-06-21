@@ -2,9 +2,6 @@ import assert from 'assert';
 import events from '../lib/events';
 
 var emailConfig = require('./config/mail');
-var smsConfig = require('./config/sms');
-
-var path = require('path');
 
 describe('server-notifier', function () {
   describe('email', function () {
@@ -76,7 +73,6 @@ describe('server-notifier', function () {
         done();
       });
     });
-
 
     // Order
     it('should send order created', function (done) {

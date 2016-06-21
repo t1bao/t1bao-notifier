@@ -12,7 +12,6 @@ describe('server-notifier', function () {
     try {
       serverNotifier({}, {}, function (error) {
         assert(!error);
-        done();
       });
     } catch (e) {
       catched = true;
