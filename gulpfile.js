@@ -15,7 +15,7 @@ var isparta = require('isparta');
 // when they're loaded
 require('babel-core/register');
 
-gulp.task('static', function () {
+gulp.task('static', ['copy'], function () {
   return gulp.src('lib/*.js')
     .pipe(excludeGitignore())
     .pipe(eslint())
@@ -69,6 +69,11 @@ gulp.task('coveralls', ['test'], function () {
 
   return gulp.src(path.join(__dirname, 'coverage/lcov.info'))
     .pipe(coveralls());
+});
+
+gulp.task('copy', function () {
+  return gulp.src('lib/**/*.html')
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('babel', ['clean'], function () {
