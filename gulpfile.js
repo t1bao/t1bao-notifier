@@ -15,7 +15,7 @@ var isparta = require('isparta');
 // when they're loaded
 require('babel-core/register');
 
-gulp.task('static', ['copy'], function () {
+gulp.task('static', function () {
   return gulp.src('lib/*.js')
     .pipe(excludeGitignore())
     .pipe(eslint())
@@ -86,5 +86,5 @@ gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('prepublish', ['nsp', 'babel']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('prepublish', ['nsp', 'babel', 'copy']);
+gulp.task('default', ['copy', 'static', 'test', 'coveralls']);
