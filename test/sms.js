@@ -85,7 +85,6 @@ describe('server-notifier', function () {
       });
     });
 
-
     // Order
     it('should send order created', function (done) {
       process.env.NOTIFIER_BYPASS = 1;
@@ -166,7 +165,6 @@ describe('server-notifier', function () {
       events.emit('sms', 'order/cancelled-by-customer', options, function (error, data) {
         assert(!error);
         if (process.env.NOTIFIER_BYPASS <= 0) {
-
           assert(data.statusCode === '000000');
           assert(data.smsMessageSid || data.templateSMS.smsMessageSid);
           assert(data.dateCreated || data.templateSMS.dateCreated);
@@ -222,7 +220,7 @@ describe('server-notifier', function () {
       };
       events.emit('sms', 'order/finished', options, function (error, data) {
         assert(!error);
-        if (process.env.NOTIFIER_BYPASS <= 0 && false) {
+        if (process.env.NOTIFIER_BYPASS <= 0) {
           assert(data.statusCode === '000000');
           assert(data.smsMessageSid || data.templateSMS.smsMessageSid);
           assert(data.dateCreated || data.templateSMS.dateCreated);
@@ -279,7 +277,6 @@ describe('server-notifier', function () {
       events.emit('sms', 'order/received', options, function (error, data) {
         assert(!error);
         if (process.env.NOTIFIER_BYPASS <= 0) {
-
           assert(data.statusCode === '000000');
           assert(data.smsMessageSid || data.templateSMS.smsMessageSid);
           assert(data.dateCreated || data.templateSMS.dateCreated);
@@ -308,7 +305,6 @@ describe('server-notifier', function () {
       events.emit('sms', 'order/delivered', options, function (error, data) {
         assert(!error);
         if (process.env.NOTIFIER_BYPASS <= 0) {
-
           assert(data.statusCode === '000000');
           assert(data.smsMessageSid || data.templateSMS.smsMessageSid);
           assert(data.dateCreated || data.templateSMS.dateCreated);
@@ -334,13 +330,11 @@ describe('server-notifier', function () {
       events.emit('sms', 'order/unreachable', options, function (error, data) {
         assert(!error);
         if (process.env.NOTIFIER_BYPASS <= 0) {
-
           assert(data.statusCode === '000000');
           assert(data.smsMessageSid || data.templateSMS.smsMessageSid);
           assert(data.dateCreated || data.templateSMS.dateCreated);
         }
         done();
-
       });
     });
   });
