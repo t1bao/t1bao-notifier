@@ -1,12 +1,12 @@
 {
-  "name": "server-notifier",
-  "version": "0.0.6",
+  "name": "t1bao-notifier",
+  "version": "0.0.1",
   "description": "notifier for t1bao",
   "homepage": "",
   "author": {
-    "name": "renwenxin",
-    "email": "renwenxin@t1bao.com",
-    "url": "api.t1bao.com"
+    "name": "calidion",
+    "email": "calidion@gmail.com",
+    "url": "www.t1bao.com"
   },
   "files": [
     "dist"
@@ -40,7 +40,7 @@
       "mocha": true
     }
   },
-  "repository": "/server-notifier",
+  "repository": "t1bao/t1bao-notifier",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
