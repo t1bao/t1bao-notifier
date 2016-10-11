@@ -72,7 +72,7 @@ gulp.task('coveralls', ['test'], function () {
 });
 
 gulp.task('copy', function () {
-  return gulp.src('lib/**/*.html')
+  return gulp.src('lib/data/**/*.html')
     .pipe(gulp.dest('dist'));
 });
 
