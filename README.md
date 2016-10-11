@@ -12,6 +12,9 @@ $ npm install --save t1bao-notifier
 ```js
 var serverNotifier = require('t1bao-notifier');
 
+//
+serverNotifier.events
+
 ```
 ## License
 

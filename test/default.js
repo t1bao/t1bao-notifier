@@ -76,7 +76,7 @@ describe('errors', function () {
       };
       var catched = false;
       try {
-        events.emit('sms', 'user/registersoso', options, function () {});
+        events.emit('sms', 'user/registersosodf', options, function () {});
       } catch (e) {
         catched = true;
       }
